@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+ {% block title %}login{% endblock title %}
+
+
+
+
+{% block content %}
+<h2> Se connecter </h2>
+<br>
+<br>
+{% for message in messages %} {{ message }} {% endfor %}
+
+<form method="POST" action="/login/">
+  {% csrf_token %}
+
+
+  Nom d'utilisateur:<br> 
+  <input type="text" name="username"  id="username" required placeholder="username"> 
+  <br>
+
+
+  Mot de passe:<br>
+  <input type="password" name="password"  id="password" required placeholder="password">
+  <br>
+
+  <button type="submit"><a href="{% url 'login' %}">Se connecter</button>
+ 
+
+{% endblock content %}
+
+

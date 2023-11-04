@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock title %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+
+    <h2><p>Bienvenue {{ user.username }} dans la WEBAPP</p></h2>
+
+
+    <!-- Lien pour se déconnecter -->
+
+    <a href="{% url 'logOut' %}" style="margin-bottom: 10px; display: block;">Se déconnecter</a>
+
+
+
+{% else %}
+
+    <div style="display: flex; flex-direction: column;">
+    
+        <!-- Lien pour s'enregistrer -->
+        <a href="{% url 'register' %}" style="margin-bottom: 10px; display: block;">S'enregistrer</a>
+
+        <!-- Lien pour se connecter -->
+        <a href="{% url 'login' %}" style="margin-bottom: 10px; display: block;">Se connecter</a>
+    </div>
+{% endif %}
+
+{% endblock content %}

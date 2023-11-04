@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+<p>Bienvenue sur notre site, <strong>{{ user.username }}</strong>!</p>
+
+<p>Veuillez cliquer sur le lien ci-dessous pour activer votre compte :</p>
+
+<a href="http://{{ domain }}/activate/{{ uid }}/{{ token }}">Activer votre compte</a>
+
+
+<br>
+Cordialement <br>
+Mme Hayet Jonas
+Data Analyste <br>
+
+<hr><br>
+<h4>nb: Il s'agit d'un e-mail de test. Veuillez le supprimer après l'avoir activé et veuillez nous faire un retour.</h4>
+
+{% endautoescape %}

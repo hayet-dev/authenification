@@ -1,0 +1,18 @@
+# Conversation avec l'assistant AI
+
+## Question de l'utilisateur :
+Qu'est-ce que notre API fait ?
+
+## Réponse de l'assistant :
+Je suis désolé, mais je ne suis pas sûr de quelle API vous parlez. Pourriez-vous préciser le nom de la classe API, ou le répertoire ou fichier dont vous parlez ?
+
+...
+Les erreurs TypeError, ValueError, OverflowError et User.DoesNotExist sont des exceptions qui peuvent être levées lors de l'exécution de ce code. Voici une brève explication de chacune de ces erreurs :
+
+TypeError : Cette erreur est levée lorsque le type d'un objet ne correspond pas à ce qui est attendu. Par exemple, si la fonction check_token attend un objet de type User en premier argument et que vous lui passez un autre type d'objet, une TypeError sera levée.
+
+ValueError : Cette erreur est levée lorsque la valeur d'un argument ou d'une variable ne correspond pas à ce qui est attendu. Par exemple, si la fonction check_token attend un jeton d'activation du compte en deuxième argument et que vous lui passez une valeur incorrecte, une ValueError sera levée.
+
+OverflowError : Cette erreur est levée lorsque le résultat d'une opération dépasse la capacité de stockage d'un type de données. Cela peut se produire, par exemple, si vous essayez de stocker un nombre entier très grand dans une variable de type int qui ne peut pas le contenir.
+
+User.DoesNotExist : Cette erreur est levée lorsque vous essayez d'accéder à un objet User qui n'existe pas dans la base de données. Cela peut se produire si le jeton d'activation du compte est valide, mais l'utilisateur correspondant n'est pas trouvé dans la base de données.

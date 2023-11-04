@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}register{% endblock title %}
+
+{% block content %}
+
+<h2>Enregistrement</h2>
+<br>
+<br>
+{% for message in messages %}    <strong> {{ message }} </strong> {% endfor %}
+
+
+<form action="/register/" method="POST"> 
+  {% csrf_token %}
+ 
+  <!-- Il s'agit d'un formulaire d'enregistrement d'utilisateur -->
+
+  Nom d'utilisateur:<br> 
+  <input type="text" name="username" id="username" required placeholder="username"> 
+  <br>
+  email:<br>
+  <input type="email" name="email" id="email" required placeholder="email">
+  <br>
+  Mot de passe:<br>
+  <input type="password" name="password" id="password" required placeholder="password">
+  <br>
+  confirmez votre mot de passe:<br>
+  <input type="password" name="confirm_password" id="confirm_password" required placeholder="confirm password">
+  <br>
+  <br>
+  <br>
+  <button type="submit">S'enregistrer</button>
+</form>
+
+{% endblock content %}

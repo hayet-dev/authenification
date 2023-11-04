@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {% block title %}AUTHENTIFICATION{% endblock title %}</title>  
+</head>
+
+<body>
+
+<nav>
+    <div class="navbar" style="background-color: grey; padding: 10px 20px; color: white; margin-right: 10px; display: inline-block;">
+        <a href="{% url 'home' %}" class="btn btn-green btn-xl">Précédent</a>
+        <a href="{% url 'logOut' %}" class="btn btn-red btn-xl">Déconnecté</a>
+    </div>
+</nav>
+
+
+    <div class="content">
+
+        <center>
+            <h2>SYTEME D'AUTHENTIFICATION</h2>
+            <hr>
+            <hr>
+            {% for message in messages %}
+                <p style="font-weight: bold; color: red;">{{ message }}</p>
+            {% endfor %}
+           
+             <br>
+             <br>
+             <br>
+            {% block content %} 
+            {% endblock  %}
+
+        </center>
+    </div>
+
+
+    <div class="footer">
+        <p> © 2022 Tous droits réservés | SYTEME D'AUTHENTIFICATION</p>
+    </div>
+</body>
+</html>
